@@ -1,0 +1,81 @@
+﻿<Page
+    x:Class="UWPCommonControlsPart1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWPCommonControlsPart1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Combobox"></TextBlock>
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="1" Margin="20,10,0,10">
+            <ComboBox Name="ComboBox" SelectionChanged="ComboBox_OnSelectionChanged">
+                <ComboBoxItem Content="Eigths"></ComboBoxItem>
+                <ComboBoxItem Content="Twentith" IsSelected="False"></ComboBoxItem>
+                <ComboBoxItem Content="Fifteenth"></ComboBoxItem>
+            </ComboBox>
+            <TextBlock Name="TextBlock1"></TextBlock>
+        </StackPanel>
+        <TextBlock  Grid.Row="1" Grid.Column="0" Text="Image"></TextBlock>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1"  Margin="20,10,0,10">
+            <Image Name="Image" HorizontalAlignment="Left" Source="Assets/IMG_20180711_182406.jpg" Margin="20,10,0,10"
+                   Width="250" Height="50" Stretch="Uniform"></Image>
+            <TextBlock Name="TextBlock2"></TextBlock>
+        </StackPanel>
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="ListBox"></TextBlock>
+        <StackPanel Orientation="Horizontal"  Grid.Row="2" Grid.Column="1"  Margin="20,10,0,10">
+            <ListBox Name="MyListBox" SelectionMode="Multiple" >
+                <ListBoxItem Content="One"></ListBoxItem>
+                <ListBoxItem Content="Two"></ListBoxItem>
+                <ListBoxItem Content="Three" IsSelected="True"></ListBoxItem>
+                <ListBoxItem Content="Five"></ListBoxItem>
+                <ListBoxItem Content="Six" IsSelected="False"></ListBoxItem>
+            </ListBox>
+            <TextBlock Name="TextBlock3"></TextBlock>
+        </StackPanel>
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="Checkbox"></TextBlock>
+        <StackPanel Orientation="Horizontal"  Grid.Row="3" Grid.Column="1"  Margin="20,10,0,10">
+            <CheckBox Name="CheckBox" Content="Agree ?" IsChecked="True" Tapped="CheckBox_OnTapped"></CheckBox>
+            <TextBlock Name="TextBlock4"></TextBlock>
+        </StackPanel>
+        <TextBlock Grid.Row="4" Grid.Column="0" Text="Radiobtn"></TextBlock >
+        <StackPanel Orientation="Horizontal"  Grid.Row="4" Grid.Column="1"  Margin="20,10,0,10">
+             <RadioButton Name="RadioButton1" Content="Yes" GroupName="Radiobtns" Checked="RadioButton1_OnChecked"></RadioButton>
+            <RadioButton Name="RadioButton2" Content="No" GroupName="Radiobtns"></RadioButton>
+            <TextBlock Name="TextBlock5"></TextBlock>
+        </StackPanel>
+        <TextBlock Grid.Row="5" Grid.Column="0" Text="Togglebtn"></TextBlock>
+        <StackPanel Orientation="Horizontal"  Grid.Row="5" Grid.Column="1"  Margin="20,10,0,10">
+            <ToggleButton Name="ToggleButton" Content="Premium" IsThreeState="True" Click="ToggleButton_OnClick"></ToggleButton>
+            <TextBlock Name="TextBlock6"></TextBlock>
+        </StackPanel>
+        <TextBlock Grid.Row="6" Grid.Column="0" Text="Toggleswitch"></TextBlock>
+        <StackPanel Orientation="Horizontal"  Grid.Row="6" Grid.Column="1"  Margin="20,10,0,10">
+        <ToggleSwitch Name="ToggleSwitch">
+            <ToggleSwitch.OffContent>
+                <TextBlock Text="I am off"></TextBlock>
+            </ToggleSwitch.OffContent>
+            <ToggleSwitch.OnContent>
+                <TextBlock Text="I am on"></TextBlock>
+            </ToggleSwitch.OnContent>
+            </ToggleSwitch>
+        </StackPanel>
+         <Button Grid.Column="0" Grid.Row="7" Click="ButtonBase_OnClick">Go to common controls section 2</Button>
+    </Grid>
+</Page>

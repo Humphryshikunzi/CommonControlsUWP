@@ -1,0 +1,90 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="UWPCommonControlsPart1.Commoncontrolspart2"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWPCommonControlsPart1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Time Picker"  ></TextBlock>
+        <TimePicker
+            Grid.Column="1" Grid.Row="0"   Margin="20,0,0,20"></TimePicker>
+        <TextBlock Text="Calender Picker" Grid.Row="1" Grid.Column="0"></TextBlock>
+        <CalendarDatePicker Grid.Column="1" Grid.Row="1"  Margin="20,0,0,20" PlaceholderText="Choose a date"></CalendarDatePicker>
+        <TextBlock Text="Calender View" Grid.Row="2" Grid.Column="0" ></TextBlock>
+           <StackPanel Grid.Column="1" Grid.Row="2">
+               <CalendarView x:ConnectionId='9' Name="CalendarView" SelectionMode="Multiple"                                                           ></CalendarView>
+               <TextBlock x:ConnectionId='10' Name="CalenderViewTextBlock"></TextBlock>
+           </StackPanel>
+        <TextBlock Text="Slider" Grid.Row="3" Grid.Column="0"></TextBlock>
+        <Slider x:ConnectionId='2' Name="MySlider" Grid.Column="1" Grid.Row="3" Margin="20,0,0,20" Maximum="100" Minimum="0" Value="55" Width="200"></Slider>
+        <TextBlock Text="Progress bar" Grid.Row="4" Grid.Column="0"></TextBlock>
+        <ProgressBar x:ConnectionId='3' Name="MyProgressBar" Grid.Column="1" Grid.Row="4" Maximum="100" Minimum="0" Width="200"                                             
+                     HorizontalAlignment="Left"></ProgressBar>
+        <TextBlock Text="Progress Ring" Grid.Row="5" Grid.Column="0"></TextBlock>
+        <ProgressRing x:ConnectionId='4' Name="MyProgressRing" Grid.Column="1" Grid.Row="5" Width="50" Height="50" HorizontalAlignment="Left" IsActive="True"></ProgressRing>
+        <TextBlock Text="Flyout" Grid.Column="0" Grid.Row="6"></TextBlock>
+        <Button x:ConnectionId='5' Grid.Column="1" Grid.Row="6" Name="MyButton" Content="Flyout" Margin="20,0,0,20">
+            <Button.Flyout>
+                <Flyout x:ConnectionId='7' x:Name="MyFlyout">
+                    <StackPanel Margin="20,20,20,20">
+                        <TextBlock Margin="0,0,0,10">I flew out to confirm am working</TextBlock>
+                        <Button x:ConnectionId='8' Name="MyInnerFlyoutButton" Content="Ok" HorizontalAlignment="Right"                                    ></Button>
+                    </StackPanel>
+                </Flyout>
+            </Button.Flyout>
+        </Button>
+        <TextBlock Grid.Column="0" Grid.Row="7">MenuFlyout</TextBlock>
+        <Button Margin="20,0,0,20" Grid.Column="1" Grid.Row="7" Content="FlyoutMenu">
+            <Button.Flyout>
+                <MenuFlyout Placement="Right">
+                    <MenuFlyoutItem>EEE 1.1</MenuFlyoutItem>
+                    <MenuFlyoutItem>EEE 1.2</MenuFlyoutItem>
+                    <MenuFlyoutItem>EEE 2.1</MenuFlyoutItem>
+                    <MenuFlyoutSeparator></MenuFlyoutSeparator>
+                    <MenuFlyoutSubItem Text="EEE 2.2">
+                        <MenuFlyoutItem>Electromagnetics</MenuFlyoutItem>
+                        <MenuFlyoutItem>Physical Electronics</MenuFlyoutItem>
+                        <MenuFlyoutItem>ODE</MenuFlyoutItem>
+                        <MenuFlyoutItem>Strength of Materials</MenuFlyoutItem>
+                        <MenuFlyoutItem>Thermodynamics</MenuFlyoutItem>
+                        <MenuFlyoutItem>Calculus 4</MenuFlyoutItem>
+                        <MenuFlyoutSeparator></MenuFlyoutSeparator>
+                        <MenuFlyoutSubItem Text="Circuit and Network Theory 2">
+                            <MenuFlyoutItem>Three phase power distribution</MenuFlyoutItem>
+                            <MenuFlyoutItem>Single phase power distribution</MenuFlyoutItem>
+                        </MenuFlyoutSubItem>
+                        <MenuFlyoutSeparator></MenuFlyoutSeparator>
+                        <MenuFlyoutItem> Some unit</MenuFlyoutItem>
+                    </MenuFlyoutSubItem>
+                    <MenuFlyoutSeparator></MenuFlyoutSeparator>
+                </MenuFlyout>
+            </Button.Flyout>
+        </Button>
+
+        <TextBlock Grid.Column="0" Grid.Row="8" >AutoSuggestionBox</TextBlock>
+        <AutoSuggestBox x:ConnectionId='6' Name="AutoSuggestBox" Grid.Column="1" Grid.Row="8" QueryIcon="Find" Margin="20,0,0,20"                                           
+                        PlaceholderText="Search"></AutoSuggestBox>
+
+
+    </Grid>
+</Page>
+
